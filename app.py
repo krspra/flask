@@ -37,11 +37,11 @@ def handle_delete(deleteSno):
 @app.route('/update/<int:updateSno>',methods=['POST','GET'])
 def handle_update(updateSno):
     if request.method=='POST':
-        title = request.form['title']
-        desc = request.form['desc']
+        newtitle = request.form['title']
+        newdesc = request.form['desc']
         todo = Todo.query.filter_by(Sno=updateSno).first()
-        todo.title = title
-        todo.desc = desc
+        todo.title = newtitle
+        todo.desc = newdesc
         db.session.add(todo)
         db.session.commit()
         return redirect("/")
