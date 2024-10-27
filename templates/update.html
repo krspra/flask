@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <link rel="stylesheet" href="/static/index.css" />
+  </head>
+  <body style="justify-content: center;">
+    <!-- Heading -->
+    <h1
+      style="
+        color: white;
+        text-align: center;
+        font-size: 40px;
+        width: 500px;
+      "
+    >
+      Update Todo
+    </h1>
+
+    <!-- FormHandling -->
+    <form
+      action="/update/{{todo.Sno}}"
+      method="post"
+      style="
+        width: 60%;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      "
+    >
+      <div class="dataContainer">
+        <label for="title">Title</label>
+        <input value="{{todo.title}}"
+          placeholder="Enter Title..."
+          id="title"
+          name="title"
+          type="text"
+          required
+        />
+      </div>
+      <div class="dataContainer">
+        <label for="desc">Description</label>
+        <input value="{{todo.desc}}"
+          placeholder="Enter Description..."
+          id="desc"
+          name="desc"
+          type="text"
+          required
+        />
+      </div>
+
+      <button
+        style="
+          height: 40px;
+          width: 95%;
+          background-color: white;
+          border-radius: 7px;
+          font-size: 20px;
+        "
+        type="submit"
+      >
+        Update
+      </button>
+    </form>
+  </body>
+</html>
