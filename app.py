@@ -3,7 +3,7 @@ from flask import Flask , render_template,request ,redirect
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI']="sqlite:///todo.db"
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://pradeep:aieAsD8nPAsa04iEPJMQkS8AtOQ2xO4A@dpg-csm6cvbqf0us73ft9pc0-a.oregon-postgres.render.com/cpminiprojectdb"
 app.config['SQLALCHEMY_TRACK_MODIFICATION']=False
 
 db=SQLAlchemy(app)
